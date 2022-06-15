@@ -52,14 +52,21 @@ WHERE `level` = 'magistrale';
 
 7. Da quanti dipartimenti è composta l'università? (12)
 
-SELECT count(*) 
+SELECT COUNT(*) 
+FROM `departments`;
+
+&
+
+// Metto (AS `numero_dipartimenti`) dopo il COUNT così è più formattato e nel risultato mi mostra anche questo testo citato e non solo il numero e basta
+
+SELECT COUNT(*) AS `numero_dipartimenti`
 FROM `departments`;
 
 --------------------------------------------------------------
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-SELECT count(*) 
+SELECT COUNT(*) AS `insegnanti_senza_phone`
 FROM `teachers`
 WHERE `phone` IS NULL;
 
